@@ -188,9 +188,21 @@ void LinkedList<T>::print() const {
     }
 }
 
+template<typename T>
+void LinkedList<T>::reverse() {
+    Node *p = head->next, *q = nullptr, *r;
+    while (p != nullptr) {
+        r = q;
+        q = p;
+        p = p->next;
+        q->next = r;
+    }
+    head->next = q;
+}
+
 template class LinkedList<char>;
 template class LinkedList<int>;
 template class LinkedList<double>;
 template class LinkedList<string>;
 // To install UserDefinedType to LinkedList:
-// template class LinkedList<UserDefinedType>
+//   template class LinkedList<UserDefinedType>

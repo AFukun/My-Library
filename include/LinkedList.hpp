@@ -37,6 +37,7 @@ public:
     bool deleteByValue(const T &value);
     LinkedList<T> &sort();
     LinkedList<T> &merge(LinkedList<T> &other);
+    void reverse();
     void print() const;
     // Friends
     template <typename U>
