@@ -10,7 +10,7 @@ void QueueSimulator::simulateAndLog(std::ostream &out) {
 	const int simulationTimeInSecond = static_cast<int>(hourPerSimulation * SECOND_PER_HOUR);
 	double sumAverageWaitTime = 0.0;
 	int  sumTotalTexi = 0;
-	srand((unsigned)time(0));
+	// srand((unsigned)ftime(0));
 
 	for (int sim = 0;sim < numberOfSimulation;sim++) {
 		int totalWaitTime = 0, totalTexi = 0, servedTexi = 0, texiTurnAway = 0;

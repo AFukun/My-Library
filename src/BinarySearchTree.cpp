@@ -29,7 +29,8 @@ BinarySearchTree<ValueType, Compare>::~BinarySearchTree() {
 
 template<typename ValueType, typename Compare>
 void BinarySearchTree<ValueType, Compare>::insert(ValueType value) {
-
+	ValueType temp = value;
+	return;
 }
 
 // template<typename ValueType, typename Compare>
