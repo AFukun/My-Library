@@ -12,8 +12,8 @@ public:
     BinarySearchTree(std::vector<ValueType> &inorder_seq, std::vector<ValueType> &preorder_seq);
     BinarySearchTree(BinarySearchTree &other);
     ~BinarySearchTree();
-    bool insert(ValueType value);
-    bool remove(ValueType value);
+    void insert(ValueType value);
+    void remove(ValueType value);
     std::vector<ValueType> getInorderSequence();
     std::vector<ValueType> getPreorderSequence();
     std::vector<ValueType> getPostorderSequence();
@@ -26,10 +26,7 @@ private:
         Node *right;
         Node(ValueType value) :value(value), left(nullptr), right(nullptr) {}
     };
-
     Node *root;
-
-    bool (*compare)(ValueType &lhs, ValueType &rhs);
-
-    void getBinaryDividedSequence(std::vector<ValueType> dstSeq, std::iterator<std::random_access_iterator_tag, ValueType> begin, std::iterator<std::random_access_iterator_tag, ValueType> end);
+    void insertAt(Node *&node, ValueType value);
+    void buildByInorderSequence(std::vector<ValueType> &seq, size_t begin, size_t end);
 };

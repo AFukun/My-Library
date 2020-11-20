@@ -27,29 +27,46 @@ BinarySearchTree<ValueType, Compare>::~BinarySearchTree() {
 
 }
 
-// template<typename ValueType, typename Compare>
-// bool BinarySearchTree<ValueType, Compare>::insert(ValueType value) {
+template<typename ValueType, typename Compare>
+void BinarySearchTree<ValueType, Compare>::insert(ValueType value) {
 
-// }
+}
 
 // template<typename ValueType, typename Compare>
 // bool BinarySearchTree<ValueType, Compare>::remove(ValueType value) {
 
 // }
 
+// template<typename ValueType, typename Compare>
+// std::vector<ValueType> BinarySearchTree<ValueType, Compare>::getInorderSequence() {
+
+// }
+
+// template<typename ValueType, typename Compare>
+// std::vector<ValueType> BinarySearchTree<ValueType, Compare>::getPreorderSequence() {
+
+// }
+
+// template<typename ValueType, typename Compare>
+// std::vector<ValueType> BinarySearchTree<ValueType, Compare>::getPostorderSequence() {
+
+// }
+
 template<typename ValueType, typename Compare>
-std::vector<ValueType> BinarySearchTree<ValueType, Compare>::getInorderSequence() {
-
-}
-
-template<typename ValueType, typename Compare>
-std::vector<ValueType> BinarySearchTree<ValueType, Compare>::getPreorderSequence() {
-
-}
-
-template<typename ValueType, typename Compare>
-std::vector<ValueType> BinarySearchTree<ValueType, Compare>::getPostorderSequence() {
-
+void BinarySearchTree<ValueType, Compare>::buildByInorderSequence(std::vector<ValueType> &seq, size_t begin, size_t end) {
+	if (begin >= end) return;
+	size_t mid = begin + (end - begin) / 2;
+	insert(seq[mid]);
+	buildByInorderSequence(seq, begin, mid);
+	buildByInorderSequence(seq, mid + 1, end);
 }
 
 template class BinarySearchTree<int>;
+
+
+template<typename ValueType, typename Compare>
+void BinarySearchTree<ValueType, Compare>::insertAt(Node *&node, ValueType value) {
+	{
+		if (node == nullptr)  node = new Node(value);
+	}
+}
