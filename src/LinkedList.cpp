@@ -200,9 +200,7 @@ void LinkedList<T>::reverse() {
     head->next = q;
 }
 
-// template class LinkedList<char>;
-// template class LinkedList<int>;
-// template class LinkedList<double>;
-// template class LinkedList<string>;
-// To install UserDefinedType to LinkedList:
-//   template class LinkedList<UserDefinedType>
+template class LinkedList<char>;
+template class LinkedList<int>;
+template class LinkedList<double>;
+template class LinkedList<string>;

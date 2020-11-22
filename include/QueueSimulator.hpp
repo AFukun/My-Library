@@ -12,7 +12,6 @@ private:
 		int boardTime;
 		TexiEntity(int arriveTime, int boardTime) : arriveTime(arriveTime), boardTime(boardTime) {};
 	};
-
 	const int SECOND_PER_HOUR = 3600;
 	const int SECOND_PER_MINUTE = 60;
 	const size_t QUEUE_MAX_LEN = 60;
