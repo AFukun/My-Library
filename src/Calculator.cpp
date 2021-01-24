@@ -167,6 +167,7 @@ bool Calculator<int>::isValidDigit(char ch) {
 	return std::isdigit(ch);
 }
 
+
 template class Calculator<int>;
 template class Calculator<float>;
 template class Calculator<double>;

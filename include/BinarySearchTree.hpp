@@ -3,7 +3,7 @@
 #include <initializer_list>
 #include <functional>
 
-template<typename ValueType, typename Compare = std::less<ValueType>>
+template<typename ValueType, typename Compare = std::less<ValueType> >
 class BinarySearchTree {
 public:
     BinarySearchTree();
